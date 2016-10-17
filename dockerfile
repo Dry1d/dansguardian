@@ -18,7 +18,7 @@ ADD squid.conf /etc/squid3/squid.conf
 
 ADD dansguardian.conf /etc/dansguardian/dansguardian.conf
 
-ADD blacklists /etc/dansguardian/lists/blacklists/
+ADD BL /etc/dansguardian/lists/blacklists/
 
 RUN freshclam
 ADD exceptioniplist /etc/dansguardian/lists/exceptioniplist
