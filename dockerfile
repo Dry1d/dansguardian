@@ -5,7 +5,8 @@ ADD resolv.conf /etc/resolv.conf
 RUN rm /etc/localtime
 RUN ln -s /usr/share/zoneinfo/Asia/Yekaterinburg /etc/localtime
 RUN apt-get update -q
-RUN apt-get install -qy dansguardian squid3 clamav-daemon 
+RUN apt-get install -qy dansguardian squid3 clamav-daemon
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/
 
 RUN mkdir /var/run/clamav
 RUN touch /var/run/clamav/clamd.ctl
