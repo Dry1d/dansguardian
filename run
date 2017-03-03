@@ -8,9 +8,5 @@ mv /var/log/squid3/netdb.state /var/log/squid3/netdb-`eval date +%H%M%d%m%y`.sta
 squid3 -z
 
 /etc/init.d/clamav-daemon start
-squid3 start
-sleep 30
-service dansguardian start
-sleep 30
-tail -f /var/log/dansguardian/access.log
+squid3 start && service dansguardian start && tail -f /var/log/dansguardian/access.log
 sleep infinity
