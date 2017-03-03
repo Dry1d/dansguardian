@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mv /var/log/dansguardian/access.log /var/log/dansguardian/access-`eval date +%d%m%y`.log
+mv /var/log/dansguardian/access.log /var/log/dansguardian/access-`eval date +%H%M%d%m%y`.log
 mv /var/log/squid3/access.log /var/log/squid3/access-`eval date +%H%M%d%m%y`.log
 mv /var/log/squid3/cache.log /var/log/squid3/cache-`eval date +%H%M%d%m%y`.log
 mv /var/log/squid3/netdb.state /var/log/squid3/netdb-`eval date +%H%M%d%m%y`.state
